@@ -22,3 +22,6 @@ Git a Load Of Charts is a React Application that allows you to search for a spec
 [const queryString = 'q=' + encodeURIComponent('GitHub Octocat in:readme user:defunkt')](https://docs.github.com/en/rest/search?apiVersion=2022-11-28interface 
 
 fetch not axios for query.
+project-setup ()
+homepage-creation
+model-creation
