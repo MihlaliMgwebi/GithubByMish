@@ -1,15 +1,15 @@
-interface Repositories {
+interface IRepositories {
     total_count: number;
     incomplete_results: boolean;
-    repositories: Repository[];
+    repositories: IRepository[];
 }
 
-interface Repository {
+interface IRepository {
     id: number;
     node_id: string;
     name: string;
     full_name: string;
-    owner: Owner;
+    owner: IOwner;
     private: boolean;
     html_url: string;
     description: string;
@@ -80,10 +80,10 @@ interface Repository {
     archived: boolean;
     disabled: boolean;
     visibility: string;
-    license: License;
+    license: ILicense;
 }
 
-interface License {
+interface ILicense {
     key: string;
     name: string;
     url: string;
@@ -92,7 +92,7 @@ interface License {
     html_url: string;
 }
 
-interface Owner {
+interface IOwner {
     login: string;
     id: number;
     node_id: string;
