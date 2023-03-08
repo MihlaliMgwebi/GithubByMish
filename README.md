@@ -13,6 +13,12 @@ Git a Load Of Charts is a React Application that allows you to search for a spec
 4. [Search Query Syntax](https://docs.github.com/en/rest/search?apiVersion=2022-11-28#constructing-a-search-query)
 
 # Commands
-
+0. Convert JSON to TS (Shift + Ctrl + Alt + V)
 1. npm run build
 2. npx http-server dist
+
+# Sidebar sis
+
+[const queryString = 'q=' + encodeURIComponent('GitHub Octocat in:readme user:defunkt')](https://docs.github.com/en/rest/search?apiVersion=2022-11-28interface 
+
+fetch not axios for query.
