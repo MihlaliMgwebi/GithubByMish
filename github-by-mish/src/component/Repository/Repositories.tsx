@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { searchRepositories } from "../api/api";
+import { searchRepositories } from "../../api/api";
+import Repository from "./Repository";
 
 const Repositories = () => {
   const [repositories, setRepositories] = useState<IRepositories>();
@@ -16,11 +17,20 @@ const Repositories = () => {
 
   return (
     <>
-      <h1>Hello Repositories</h1>
+      <h1>List of Repositories</h1>
       <div>
         <p>Incomplete Results: {repositories?.incomplete_results ?? "False"}</p>
         <p>Total Count: {repositories?.total_count ?? "False"}</p>
-        {/* map repostories.repositories */}
+        {repositories?.items ? (
+          repositories?.items.map((repository) => (
+            <Repository
+              key={repository.id}
+              repository={repository}
+            />
+          ))
+        ) : (
+          <p>Unknown</p>
+        )}
       </div>
     </>
   );

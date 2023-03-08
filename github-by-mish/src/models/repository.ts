@@ -1,7 +1,7 @@
 interface IRepositories {
     total_count: number;
     incomplete_results: boolean;
-    repositories: IRepository[];
+    items: IRepository[];
 }
 
 interface IRepository {
