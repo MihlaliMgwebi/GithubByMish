@@ -4,7 +4,6 @@ export async function searchRepositories(): Promise<IRepositories | undefined> {
         .then((response) => response.json() as Promise<IRepositories>)
         .then((data) => data)
         .catch((err) => {
-            console.error(err.message)
             return undefined;
         })
 }

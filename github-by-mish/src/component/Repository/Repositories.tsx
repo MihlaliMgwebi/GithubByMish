@@ -11,7 +11,6 @@ const Repositories = () => {
 
   async function getRepositories() {
     const repositories = await searchRepositories();
-    console.log(repositories);
     setRepositories(repositories);
   }
 
