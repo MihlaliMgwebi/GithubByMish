@@ -4,7 +4,7 @@ import SearchRepository from "../Search/SearchRepository";
 import Repository from "./Repository";
 
 const Repositories = () => {
-  const [repositories, setRepositories] = useState<IRepositories>();
+  const [repositories, setRepositories] = useState<IRepositories>(); // api search results
 
   useEffect(() => {
     getRepositories();
