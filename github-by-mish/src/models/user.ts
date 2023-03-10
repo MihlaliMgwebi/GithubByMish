@@ -1,3 +1,4 @@
+// Personal user account or organization accounts.
 interface User {
     login: string;
     id: number;
@@ -17,11 +18,15 @@ interface User {
     received_events_url: string;
     type: string;
     site_admin: boolean;
+}
+
+// publicly available information about someone with a GitHub account.
+interface UserInfo extends User {
     name: string;
     company: string;
     blog: string;
     location: string;
-    email: string;
+    email?: string;
     hireable: boolean;
     bio: string;
     twitter_username: string;
@@ -32,3 +37,4 @@ interface User {
     created_at: string;
     updated_at: string;
 }
+
