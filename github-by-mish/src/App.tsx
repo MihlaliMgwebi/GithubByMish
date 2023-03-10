@@ -1,10 +1,10 @@
 import "./App.css";
-import Repositories from "./component/Repository/Repositories";
+import User from "./component/User/User";
 
 function App() {
   return (
     <>
-      <Repositories />
+      <User />
     </>
   );
 }
