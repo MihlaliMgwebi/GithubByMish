@@ -1,10 +1,8 @@
-interface IRepositories {
-    total_count: number;
-    incomplete_results: boolean;
-    items: IRepository[];
+interface IPublicRepositories {
+    publicRepositories: IPublicRepository[]
 }
 
-interface IRepository {
+interface IPublicRepository {
     id: number;
     node_id: string;
     name: string;
@@ -15,19 +13,6 @@ interface IRepository {
     description: string;
     fork: boolean;
     url: string;
-    created_at: string;
-    updated_at: string;
-    pushed_at: string;
-    homepage: string;
-    size: number;
-    stargazers_count: number;
-    watchers_count: number;
-    language: string;
-    forks_count: number;
-    open_issues_count: number;
-    master_branch: string;
-    default_branch: string;
-    score: number;
     archive_url: string;
     assignees_url: string;
     blobs_url: string;
@@ -65,6 +50,29 @@ interface IRepository {
     tags_url: string;
     teams_url: string;
     trees_url: string;
+    hooks_url: string;
+}
+
+interface ISearchedRepositories {
+    total_count: number;
+    incomplete_results: boolean;
+    items: ISearchedRepository[];
+}
+
+interface ISearchedRepository extends IPublicRepositories {
+    created_at: string;
+    updated_at: string;
+    pushed_at: string;
+    homepage: string;
+    size: number;
+    stargazers_count: number;
+    watchers_count: number;
+    language: string;
+    forks_count: number;
+    open_issues_count: number;
+    master_branch: string;
+    default_branch: string;
+    score: number;
     clone_url: string;
     mirror_url: string;
     hooks_url: string;
@@ -112,3 +120,5 @@ interface IOwner {
     events_url: string;
     site_admin: boolean;
 }
+
+
