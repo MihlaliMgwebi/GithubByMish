@@ -1,4 +1,4 @@
-import { repositoryPropType } from "../../props/prop-types";
+import { repositoryPropType } from "../../props/propTypes";
 
 const Repository = (props: repositoryPropType) => {
   return (
