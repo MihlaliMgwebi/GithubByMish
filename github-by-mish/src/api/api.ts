@@ -1,6 +1,6 @@
 
-export async function searchRepositories(): Promise<IRepositories | undefined> {
-    return fetch("https://api.github.com/search/repositories?q=stars:>100000")
+export async function listPublicRepositories(): Promise<IRepositories | undefined> {
+    return fetch("https://api.github.com/repositories")
         .then((response) => response.json() as Promise<IRepositories>)
         .then((data) => data)
         .catch((err) => {

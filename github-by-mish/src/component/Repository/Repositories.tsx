@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { searchRepositories } from "../../api/api";
+import { listPublicRepositories } from "../../api/api";
 import SearchRepository from "../Search/SearchRepository";
 import Repository from "./Repository";
 
@@ -11,7 +11,7 @@ const Repositories = () => {
   }, []);
 
   async function getRepositories() {
-    const repositories = await searchRepositories();
+    const repositories = await listPublicRepositories();
     setRepositories(repositories);
   }
 
