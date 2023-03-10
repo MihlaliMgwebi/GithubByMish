@@ -1,11 +1,8 @@
-import "./App.css";
-import Repositories from "./component/Repository/Repositories";
-
 function App() {
   return (
-    <>
-      <Repositories />
-    </>
+    <h1 className='bg-red-500 text-5xl font-bold underline'>
+      Hello world in App.tsx!
+    </h1>
   );
 }
 
