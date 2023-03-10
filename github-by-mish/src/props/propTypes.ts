@@ -3,3 +3,9 @@ export type repositoryPropType = {
     key: number;
     repository: IRepository
 }
+
+export type userPropType = {
+    key: number;
+    user: IUserInfo
+}
+
