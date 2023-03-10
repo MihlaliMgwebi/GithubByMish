@@ -1,5 +1,9 @@
 # GithubByMish
 
+## References
+### [Form inputs](https://beta.reactjs.org/learn/state-a-components-memory#recap)
+### [Thinking about UI declaratively](https://beta.reactjs.org/learn/reacting-to-input-with-state#thinking-about-ui-declaratively)
+
 ## Project Setup
 
 - [x] Create React App using npm create vite@latest (Chose React and TS)
