@@ -1,5 +1,5 @@
 // Personal user account or organization accounts.
-interface User {
+interface IUser {
     login: string;
     id: number;
     node_id: string;
@@ -21,7 +21,7 @@ interface User {
 }
 
 // publicly available information about someone with a GitHub account.
-interface UserInfo extends User {
+interface IUserInfo extends IUser {
     name: string;
     company: string;
     blog: string;
