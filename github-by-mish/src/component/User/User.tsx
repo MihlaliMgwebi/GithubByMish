@@ -3,7 +3,12 @@ import { userPropType } from "../../props/propTypes";
 const User = (props: userPropType) => {
   return (
     <>
-      <h1>{props.user.login}</h1>
+      <img
+        src={props.user.avatar_url}
+        alt='User avatar'
+      />
+      <button>{props.user.login}</button>
+      <div>{}</div>
     </>
   );
 };
