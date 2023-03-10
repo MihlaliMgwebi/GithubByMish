@@ -1,7 +1,3 @@
-interface IPublicRepositories {
-    publicRepositories: IPublicRepository[]
-}
-
 interface IPublicRepository {
     id: number;
     node_id: string;
@@ -59,7 +55,7 @@ interface ISearchedRepositories {
     items: ISearchedRepository[];
 }
 
-interface ISearchedRepository extends IPublicRepositories {
+interface ISearchedRepository extends IPublicRepository {
     created_at: string;
     updated_at: string;
     pushed_at: string;
