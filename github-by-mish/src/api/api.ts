@@ -8,9 +8,9 @@ export async function searchRepositories(): Promise<IRepositories | undefined> {
 }
 
 // Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
-export async function listAllUsers(): Promise<IUser | undefined> {
+export async function listOfAllUsers(): Promise<IUser[] | undefined> {
     return fetch("https://api.github.com/users")
-        .then((response) => response.json() as Promise<IUser>)
+        .then((response) => response.json() as Promise<IUser[]>)
         .then((data) => data)
         .catch((err) => {
             return undefined;

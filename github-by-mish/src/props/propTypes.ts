@@ -5,7 +5,6 @@ export type repositoryPropType = {
 }
 
 export type userPropType = {
-    key: number;
     user: IUserInfo
 }
 
