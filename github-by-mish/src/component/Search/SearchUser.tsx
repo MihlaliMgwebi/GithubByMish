@@ -1,11 +1,15 @@
-const SearchUser = () => {
+import { searchUserPropType } from "../../props/propTypes";
+
+const SearchUser = (props: searchUserPropType) => {
   return (
     <>
       <div>
         Search:
         <input
           type='text'
-          placeholder='Search User...'
+          placeholder='Search by Username...'
+          value={props.value}
+          onChange={props.onChange}
         />
       </div>
     </>
