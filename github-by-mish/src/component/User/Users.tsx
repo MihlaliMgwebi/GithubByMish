@@ -1,24 +1,21 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { listOfAllUsers } from "../../api/api";
 import User from "./User";
-
 const Users = () => {
-  const [users, setUsers] = useState<IUser[]>();
+  const usersQuery = useQuery({
+    queryKey: ["users"],
+    queryFn: listOfAllUsers,
+  });
 
-  useEffect(() => {
-    getRepositories();
-  }, []);
-
-  async function getRepositories() {
-    const users = await listOfAllUsers();
-    setUsers(users);
-  }
+  if (usersQuery.isLoading) return <h1>Loading</h1>;
+  if (usersQuery.isError) return <pre>{JSON.stringify(usersQuery.error)}</pre>;
 
   return (
     <>
       <h1>List of Users</h1>
-      {users ? (
-        users.map((user) => (
+
+      {usersQuery.data ? (
+        usersQuery.data.map((user) => (
           <User
             key={user.id}
             user={user as IUserInfo}

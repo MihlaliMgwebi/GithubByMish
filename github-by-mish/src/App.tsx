@@ -1,9 +1,14 @@
+import { QueryClient, QueryClientProvider } from "react-query";
 import Users from "./component/User/Users";
 
+const queryClient = new QueryClient();
 function App() {
   return (
     <>
-      <Users />
+      <QueryClientProvider client={queryClient}>
+        <Users />
+        {/* <ReactQueryDevtools /> */}
+      </QueryClientProvider>
     </>
   );
 }
