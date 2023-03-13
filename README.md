@@ -16,3 +16,4 @@
 ### user-creation
 
 1. [Skeleton](https://skeletonreact.com/)
+2. [Asynchronous State Management for fetch api calls](https://www.youtube.com/watch?v=r8Dg0KVnfMA&t=1683s)
