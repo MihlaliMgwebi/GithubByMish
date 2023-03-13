@@ -1,6 +1,7 @@
-export async function searchRepositories(): Promise<IRepositories | undefined> {
-    return fetch("https://api.github.com/search/repositories?q=stars:>100000")
-        .then((response) => response.json() as Promise<IRepositories>)
+
+export async function listPublicRepositories(): Promise<IPublicRepository[] | undefined> {
+    return fetch("https://api.github.com/repositories")
+        .then((response) => response.json() as Promise<IPublicRepository[]>)
         .then((data) => data)
         .catch((err) => {
             return undefined;
@@ -21,8 +22,8 @@ export async function listOfAllUsers(): Promise<IUser[] | undefined> {
  * Given the username, provides publicly available information about someone with a GitHub account
  * @param {string} username - The employee who is responsible for the project.
  */
-export async function getPubliclyAvailableUserInfo(username: string): Promise<IUserInfo | undefined> {
-    return fetch(`https://api.github.com/user/${username}`)
+export async function publiclyAvailableUserInfo(username: string): Promise<IUserInfo | undefined> {
+    return fetch(`https://api.github.com/users/${username}`)
         .then((response) => response.json() as Promise<IUserInfo>)
         .then((data) => data)
         .catch((err) => {

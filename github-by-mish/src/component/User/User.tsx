@@ -7,7 +7,7 @@ const User = (props: userPropType) => {
         src={props.user.avatar_url}
         alt='User avatar'
       />
-      <button>{props.user.login}</button>
+      <button>Username: {props.user.login}</button>
       <div>{}</div>
     </>
   );

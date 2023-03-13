@@ -3,7 +3,7 @@ import { repositoryPropType } from "../../props/propTypes";
 const Repository = (props: repositoryPropType) => {
   return (
     <>
-      <h1>(Child) Repository</h1>
+      <h2>(Child) Repository</h2>
       <div>
         <p>Full Name: {props.repository.full_name ?? "Unknown"}</p>
       </div>
