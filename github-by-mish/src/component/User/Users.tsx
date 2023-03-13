@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 import { listOfAllUsers } from "../../api/api";
 import User from "./User";
 const Users = () => {
