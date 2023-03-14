@@ -1,6 +1,7 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./component/Home";
-import Users from "./component/User/Users";
+import UserInfo from "./component/User/UserInfo";
+import UserList from "./component/User/UserList";
 
 function App() {
   return (
@@ -23,7 +24,11 @@ function App() {
         />
         <Route
           path='/users'
-          element={<Users />}
+          element={<UserList />}
+        />
+        <Route
+          path='/users/:username'
+          element={<UserInfo />}
         />
       </Routes>
     </>

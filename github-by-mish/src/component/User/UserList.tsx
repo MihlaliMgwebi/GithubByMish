@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useDebounce } from "usehooks-ts";
 import { listOfAllUsers } from "../../api/api";
 import SearchUser from "../Search/SearchUser";
-import User from "./User";
+import User from "./UserCard";
 
-const Users = () => {
+const UserList = () => {
   const [users, setUsers] = useState<IUser[]>();
   const [searchQueryValue, setSearchQueryValue] = useState<string>("");
   const debouncedSearchQueryValue = useDebounce<string>(searchQueryValue, 500);
@@ -46,4 +46,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default UserList;
