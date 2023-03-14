@@ -3,6 +3,7 @@ import NotFound from "./component/Error/NotFound";
 import Home from "./component/Home";
 import UserInfo from "./component/User/UserInfo";
 import UserList from "./component/User/UserList";
+import { UsersLayout } from "./component/User/UsersLayout";
 
 function App() {
   return (
@@ -25,12 +26,16 @@ function App() {
         />
         <Route
           path='/users'
-          element={<UserList />}
-        />
-        <Route
-          path='/users/:username'
-          element={<UserInfo />}
-        />
+          element={<UsersLayout />}>
+          <Route
+            index
+            element={<UserList />}
+          />
+          <Route
+            path=':username'
+            element={<UserInfo />}
+          />
+        </Route>
         <Route
           path='*'
           element={<NotFound />}
