@@ -2,7 +2,6 @@
 
 ## References
 
-
 ### repo-creation
 
 1. [Form inputs](https://beta.reactjs.org/learn/state-a-components-memory#recap)
@@ -20,11 +19,11 @@ Run something after delay. Tuping respository in search field. Improves performa
 5. [15 - Custom Hooks #1-5: useToggle, useTimeout, useDebounce, useUpdateEffect, useArray](https://courses.webdevsimplified.com/view/courses/react-hooks-simplified/1327246-custom-hooks/4121583-15-custom-hooks-1-5-usetoggle-usetimeout-usedebounce-useupdateeffect-usearray)
 6. [Reacts Hook Library](https://usehooks-ts.com/)
 
-
 ## Project Setup
 
 - [x] Create React App using npm create vite@latest (Chose React and TS)
 - [x] Install and Test Tailwind
+
 1. Check my template files in tsconfig.json
 2. Check if dist folder generates and styles are added at the bottom of my CSS file
 3. Check if I am importing the styles in my dist folder
@@ -32,3 +31,7 @@ Run something after delay. Tuping respository in search field. Improves performa
 ### user-creation
 
 1. [Skeleton](https://skeletonreact.com/)
+
+### routing
+
+1. [Sharing Layouts](https://blog.webdevsimplified.com/2022-07/react-router/)

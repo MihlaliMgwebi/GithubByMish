@@ -13,7 +13,6 @@ export function UsersLayout() {
           </li>
         </ul>
       </nav>
-
       <Outlet />
     </>
   );
