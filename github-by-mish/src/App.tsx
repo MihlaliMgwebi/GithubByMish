@@ -4,11 +4,16 @@ import Home from "./component/Home";
 import UserInfo from "./component/User/UserInfo";
 import UserList from "./component/User/UserList";
 import { UsersLayout } from "./component/User/UsersLayout";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Users from "./component/User/Users";
 
+const queryClient = new QueryClient();
 function App() {
   return (
     <>
-      <nav>
+      <QueryClientProvider client={queryClient}>
+        <nav>
         <ul>
           <li>
             <Link to='/'>Home</Link>
@@ -41,6 +46,8 @@ function App() {
           element={<NotFound />}
         />
       </Routes>
+        <ReactQueryDevtools />
+      </QueryClientProvider>
     </>
   );
 }

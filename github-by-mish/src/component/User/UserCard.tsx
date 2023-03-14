@@ -1,16 +1,26 @@
+import { useQuery } from "@tanstack/react-query";
+import { getPubliclyAvailableUserInfo } from "../../api/api";
 import { userPropType } from "../../props/propTypes";
 
-const User = (props: userPropType) => {
+const UserCard = (props: userPropType) => {
+  const username = props.user.login;
+  const userByIdQuery = useQuery(["users", username], () =>
+    getPubliclyAvailableUserInfo(username)
+  );
   return (
     <>
-      <img
-        src={props.user.avatar_url}
-        alt='User avatar'
-      />
-      <button>Username: {props.user.login}</button>
-      <div>{}</div>
+      <button
+        onClick={() => {
+          console.log(userByIdQuery.data);
+        }}>
+        <img
+          src={props.user.avatar_url}
+          alt='User avatar'
+        />
+        {username}
+      </button>
     </>
   );
 };
 
-export default User;
+export default UserCard;

@@ -35,3 +35,4 @@ Run something after delay. Tuping respository in search field. Improves performa
 ### routing
 
 1. [Sharing Layouts](https://blog.webdevsimplified.com/2022-07/react-router/)
+2. [Asynchronous State Management for fetch api calls](https://www.youtube.com/watch?v=r8Dg0KVnfMA&t=1683s)
