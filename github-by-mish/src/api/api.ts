@@ -22,7 +22,7 @@ export async function listOfAllUsers(): Promise<IUser[] | undefined> {
  * @param {string} username - The employee who is responsible for the project.
  */
 export async function getPubliclyAvailableUserInfo(username: string): Promise<IUserInfo | undefined> {
-    return fetch(`https://api.github.com/user/${username}`)
+    return fetch(`https://api.github.com/users/${username}`)
         .then((response) => response.json() as Promise<IUserInfo>)
         .then((data) => data)
         .catch((err) => {

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { listOfAllUsers } from "../../api/api";
-import User from "./User";
+import UserCard from "./UserCard";
+
 const Users = () => {
   const usersQuery = useQuery({
     queryKey: ["users"],
@@ -16,7 +17,7 @@ const Users = () => {
 
       {usersQuery.data ? (
         usersQuery.data.map((user) => (
-          <User
+          <UserCard
             key={user.id}
             user={user as IUserInfo}
           />
